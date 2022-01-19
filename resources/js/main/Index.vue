@@ -20,7 +20,7 @@
                 </li>
     
                 <li class="nav-item">
-                    <router-link class="nav-link nav-custom" :to="{name: 'orga'}" v-if="user">Orga-Bereich</router-link>
+                    <router-link class="nav-link nav-custom" :to="{name: 'orga'}" v-if="orga_id">Orga-Bereich</router-link>
                     <router-link class="nav-link disabled" :to="{name: 'orga'}" v-else>Orga-Bereich</router-link>
                 </li>
 

@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
+use App\Http\Controllers\OrgaController;
+use App\Http\Controllers\EventController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,3 +35,21 @@ Route::get('/{any?}', function () {
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+
+//Public routes
+Route::get('/events', [EventController::class, 'index']);
+Route::get('/events/{id}', [EventController::class, 'show']);
+Route::get('/orgas', [OrgaController::class, 'index']);
+Route::get('/orgas/{id}', [OrgaController::class, 'show']);
+
+//Protected routes
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::post('/events', [EventController::class, 'store']);
+    Route::put('/events/{id}', [EventController::class, 'update']);
+    Route::delete('/events/{id}', [EventController::class, 'destroy']);
+
+    Route::post('/orgas', [OrgaController::class, 'store']);
+    Route::put('/orgas/{id}', [OrgaController::class, 'update']);
+    Route::delete('/orgas/{id}', [OrgaController::class, 'destroy']);
+    });

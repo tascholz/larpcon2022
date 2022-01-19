@@ -5475,6 +5475,452 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Eventform.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Eventform.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      name: null,
+      orga_id: null,
+      description: null,
+      date_start: null,
+      date_end: null,
+      sc_count: null,
+      nsc_count: null,
+      sc_price: null,
+      nsc_price: null,
+      food_price: null,
+      has_registration: false,
+      reg_first_name: true,
+      reg_last_name: true,
+      reg_adress: true,
+      reg_birthdate: true,
+      reg_mail: true,
+      reg_supervisor: true,
+      reg_char_name: true,
+      reg_char_profession: true,
+      reg_char_race: true,
+      reg_char_group: true,
+      reg_known_nsc: true,
+      reg_char_history: true,
+      reg_char_magic: true,
+      reg_allergies: true,
+      reg_tents: true,
+      reg_pkw: true,
+      reg_newsletter: true,
+      reg_first_time: true,
+      reg_plot_wishes: true,
+      reg_con_wishes: true,
+      reg_corona: true,
+      reg_corona_text: "",
+      reg_agb: true,
+      reg_agb_text: ""
+    };
+  },
+  methods: {
+    has_registration_flip: function has_registration_flip() {
+      this.has_registration = !this.has_registration;
+    },
+    send_event: function send_event() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return axios.get('/user').then(function (response) {
+                  _this.orga_id = response.data.orga_id;
+                });
+
+              case 2:
+                _context.next = 4;
+                return axios.post("/events", {
+                  'name': _this.name,
+                  'orga_id': _this.orga_id,
+                  'description': _this.description,
+                  'date_start': _this.date_start,
+                  "date_end": _this.date_end,
+                  "sc_count": _this.sc_count,
+                  "nsc_count": _this.nsc_count,
+                  "sc_price": _this.sc_price,
+                  "nsc_price": _this.nsc_price,
+                  "food_price": _this.food_price,
+                  "has_registration": _this.has_registration,
+                  "reg_first_name": _this.reg_first_name,
+                  "reg_last_name": _this.reg_last_name,
+                  "reg_adress": _this.reg_adress,
+                  "reg_birthdate": _this.reg_birthdate,
+                  "reg_mail": _this.reg_mail,
+                  "reg_supervisor": _this.reg_supervisor,
+                  "reg_char_name": _this.reg_char_name,
+                  "reg_char_profession": _this.reg_char_profession,
+                  "reg_char_race": _this.reg_char_race,
+                  "reg_char_group": _this.reg_char_group,
+                  "reg_known_nsc": _this.reg_known_nsc,
+                  "reg_char_history": _this.reg_char_history,
+                  "reg_char_magic": _this.reg_char_magic,
+                  "reg_allergies": _this.reg_allergies,
+                  "reg_tents": _this.reg_tents,
+                  "reg_pkw": _this.reg_pkw,
+                  "reg_newsletter": _this.reg_newsletter,
+                  "reg_first_time": _this.reg_first_time,
+                  "reg_plot_wishes": _this.reg_plot_wishes,
+                  "reg_con_wishes": _this.reg_con_wishes,
+                  "reg_corona": _this.reg_corona,
+                  "reg_coronta_text": _this.reg_corona_text,
+                  "reg_agb": _this.reg_agb,
+                  "reg_agb_text": _this.reg_agb_text
+                });
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    }
+  } // async created() {
+  //     await axios.get('/user').then(response => {
+  //         this.orga_id = response.data.orga_id;
+  //     });
+  // }
+
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Eventform_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Eventform.vue */ "./resources/js/orga/Eventform.vue");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    Eventform: _Eventform_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      loading: false,
+      user: null,
+      orga: null,
+      changeDescriptionState: false,
+      eventform: false
+    };
+  },
+  methods: {
+    showEventform: function showEventform() {
+      this.eventform = !this.eventform;
+    },
+    changeDescription: function changeDescription() {
+      this.changeDescriptionState = !this.changeDescriptionState;
+    },
+    abortDescription: function abortDescription() {
+      console.log("abort");
+      window.location.reload();
+    },
+    submitDescription: function submitDescription() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return axios.put("/orgas/".concat(_this.orga), {
+                  'description': _this.orga.description
+                });
+
+              case 2:
+                _this.changeDescriptionState = false;
+
+              case 3:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    }
+  },
+  created: function created() {
+    var _this2 = this;
+
+    return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _this2.loading = true;
+              _context2.next = 3;
+              return axios.get('/user').then(function (response) {
+                _this2.user = response.data;
+              });
+
+            case 3:
+              _context2.next = 5;
+              return axios.get("/api/orgas/".concat(_this2.user.orga_id)).then(function (response) {
+                console.log("/api/orgas/".concat(_this2.user.orga_id));
+                _this2.orga = response.data;
+                _this2.loading = false;
+              });
+
+            case 5:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }))();
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/user/User.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/user/User.vue?vue&type=script&lang=js& ***!
@@ -5533,15 +5979,7 @@ vue__WEBPACK_IMPORTED_MODULE_2__["default"].component('index', (__webpack_requir
 vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]);
 var app = new vue__WEBPACK_IMPORTED_MODULE_2__["default"]({
   el: '#app',
-  router: _routes__WEBPACK_IMPORTED_MODULE_0__["default"] // async beforeCreate() {
-  //     await axios.get('sanctum/csrf-cookie');
-  //     await axios.post("/login", {
-  //         email: "tjark@admin.de",
-  //         password: "test1234"
-  //     });
-  //     await axios.get('/user');
-  // },
-
+  router: _routes__WEBPACK_IMPORTED_MODULE_0__["default"]
 });
 
 /***/ }),
@@ -10704,6 +11142,54 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\nh1[data-v-712a2ac2] {\n    text-align: center;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Eventform.vue?vue&type=style&index=0&id=6258c6ac&scoped=true&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Eventform.vue?vue&type=style&index=0&id=6258c6ac&scoped=true&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.card[data-v-6258c6ac] {\n    color: rgb(59, 59, 59);\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=style&index=0&id=4c2792e1&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=style&index=0&id=4c2792e1&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\nh1[data-v-4c2792e1] {\n    text-align: center;\n}\n.main[data-v-4c2792e1] {\n    display:flex;\n    flex-direction: column;\n    padding: 5px;\n}\n.utilities[data-v-4c2792e1] {\n    padding: 5px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29029,6 +29515,66 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Eventform.vue?vue&type=style&index=0&id=6258c6ac&scoped=true&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Eventform.vue?vue&type=style&index=0&id=6258c6ac&scoped=true&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Eventform_vue_vue_type_style_index_0_id_6258c6ac_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Eventform.vue?vue&type=style&index=0&id=6258c6ac&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Eventform.vue?vue&type=style&index=0&id=6258c6ac&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Eventform_vue_vue_type_style_index_0_id_6258c6ac_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Eventform_vue_vue_type_style_index_0_id_6258c6ac_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=style&index=0&id=4c2792e1&scoped=true&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=style&index=0&id=4c2792e1&scoped=true&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Orga_vue_vue_type_style_index_0_id_4c2792e1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Orga.vue?vue&type=style&index=0&id=4c2792e1&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=style&index=0&id=4c2792e1&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Orga_vue_vue_type_style_index_0_id_4c2792e1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Orga_vue_vue_type_style_index_0_id_4c2792e1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
 /*!****************************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
@@ -29464,6 +30010,47 @@ component.options.__file = "resources/js/main/Landing.vue"
 
 /***/ }),
 
+/***/ "./resources/js/orga/Eventform.vue":
+/*!*****************************************!*\
+  !*** ./resources/js/orga/Eventform.vue ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Eventform_vue_vue_type_template_id_6258c6ac_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Eventform.vue?vue&type=template&id=6258c6ac&scoped=true& */ "./resources/js/orga/Eventform.vue?vue&type=template&id=6258c6ac&scoped=true&");
+/* harmony import */ var _Eventform_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Eventform.vue?vue&type=script&lang=js& */ "./resources/js/orga/Eventform.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Eventform_vue_vue_type_style_index_0_id_6258c6ac_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Eventform.vue?vue&type=style&index=0&id=6258c6ac&scoped=true&lang=css& */ "./resources/js/orga/Eventform.vue?vue&type=style&index=0&id=6258c6ac&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Eventform_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Eventform_vue_vue_type_template_id_6258c6ac_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Eventform_vue_vue_type_template_id_6258c6ac_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "6258c6ac",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/orga/Eventform.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/orga/Orga.vue":
 /*!************************************!*\
   !*** ./resources/js/orga/Orga.vue ***!
@@ -29475,21 +30062,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Orga_vue_vue_type_template_id_4c2792e1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Orga.vue?vue&type=template&id=4c2792e1& */ "./resources/js/orga/Orga.vue?vue&type=template&id=4c2792e1&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Orga_vue_vue_type_template_id_4c2792e1_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Orga.vue?vue&type=template&id=4c2792e1&scoped=true& */ "./resources/js/orga/Orga.vue?vue&type=template&id=4c2792e1&scoped=true&");
+/* harmony import */ var _Orga_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Orga.vue?vue&type=script&lang=js& */ "./resources/js/orga/Orga.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Orga_vue_vue_type_style_index_0_id_4c2792e1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Orga.vue?vue&type=style&index=0&id=4c2792e1&scoped=true&lang=css& */ "./resources/js/orga/Orga.vue?vue&type=style&index=0&id=4c2792e1&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
+;
 
 
 /* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
-  _Orga_vue_vue_type_template_id_4c2792e1___WEBPACK_IMPORTED_MODULE_0__.render,
-  _Orga_vue_vue_type_template_id_4c2792e1___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Orga_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Orga_vue_vue_type_template_id_4c2792e1_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Orga_vue_vue_type_template_id_4c2792e1_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  null,
+  "4c2792e1",
   null
   
 )
@@ -29572,6 +30163,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/orga/Eventform.vue?vue&type=script&lang=js&":
+/*!******************************************************************!*\
+  !*** ./resources/js/orga/Eventform.vue?vue&type=script&lang=js& ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Eventform_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Eventform.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Eventform.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Eventform_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/orga/Orga.vue?vue&type=script&lang=js&":
+/*!*************************************************************!*\
+  !*** ./resources/js/orga/Orga.vue?vue&type=script&lang=js& ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Orga_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Orga.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Orga_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/user/User.vue?vue&type=script&lang=js&":
 /*!*************************************************************!*\
   !*** ./resources/js/user/User.vue?vue&type=script&lang=js& ***!
@@ -29610,6 +30233,32 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Landing_vue_vue_type_style_index_0_id_712a2ac2_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Landing.vue?vue&type=style&index=0&id=712a2ac2&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/main/Landing.vue?vue&type=style&index=0&id=712a2ac2&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/orga/Eventform.vue?vue&type=style&index=0&id=6258c6ac&scoped=true&lang=css&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/orga/Eventform.vue?vue&type=style&index=0&id=6258c6ac&scoped=true&lang=css& ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Eventform_vue_vue_type_style_index_0_id_6258c6ac_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Eventform.vue?vue&type=style&index=0&id=6258c6ac&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Eventform.vue?vue&type=style&index=0&id=6258c6ac&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/orga/Orga.vue?vue&type=style&index=0&id=4c2792e1&scoped=true&lang=css&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/orga/Orga.vue?vue&type=style&index=0&id=4c2792e1&scoped=true&lang=css& ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Orga_vue_vue_type_style_index_0_id_4c2792e1_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Orga.vue?vue&type=style&index=0&id=4c2792e1&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=style&index=0&id=4c2792e1&scoped=true&lang=css&");
 
 
 /***/ }),
@@ -29682,19 +30331,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/orga/Orga.vue?vue&type=template&id=4c2792e1&":
-/*!*******************************************************************!*\
-  !*** ./resources/js/orga/Orga.vue?vue&type=template&id=4c2792e1& ***!
-  \*******************************************************************/
+/***/ "./resources/js/orga/Eventform.vue?vue&type=template&id=6258c6ac&scoped=true&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/orga/Eventform.vue?vue&type=template&id=6258c6ac&scoped=true& ***!
+  \************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Orga_vue_vue_type_template_id_4c2792e1___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Orga_vue_vue_type_template_id_4c2792e1___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Eventform_vue_vue_type_template_id_6258c6ac_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Eventform_vue_vue_type_template_id_6258c6ac_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Orga_vue_vue_type_template_id_4c2792e1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Orga.vue?vue&type=template&id=4c2792e1& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=template&id=4c2792e1&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Eventform_vue_vue_type_template_id_6258c6ac_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Eventform.vue?vue&type=template&id=6258c6ac&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Eventform.vue?vue&type=template&id=6258c6ac&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/orga/Orga.vue?vue&type=template&id=4c2792e1&scoped=true&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/orga/Orga.vue?vue&type=template&id=4c2792e1&scoped=true& ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Orga_vue_vue_type_template_id_4c2792e1_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Orga_vue_vue_type_template_id_4c2792e1_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Orga_vue_vue_type_template_id_4c2792e1_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Orga.vue?vue&type=template&id=4c2792e1&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=template&id=4c2792e1&scoped=true&");
 
 
 /***/ }),
@@ -29927,7 +30593,7 @@ var render = function () {
                 "li",
                 { staticClass: "nav-item" },
                 [
-                  _vm.user
+                  _vm.orga_id
                     ? _c(
                         "router-link",
                         {
@@ -30053,10 +30719,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=template&id=4c2792e1&":
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=template&id=4c2792e1& ***!
-  \**********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Eventform.vue?vue&type=template&id=6258c6ac&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Eventform.vue?vue&type=template&id=6258c6ac&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -30069,7 +30735,1676 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    Orga\n")])
+  return _c("div", [
+    _c("div", { staticClass: "card" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body" }, [
+        _c("form", [
+          _c("h5", { staticClass: "card-subtitle text-muted" }, [
+            _vm._v("Allgemein"),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group pb-2" }, [
+            _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.name,
+                  expression: "name",
+                },
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                placeholder: "Name der Con",
+                name: "name",
+              },
+              domProps: { value: _vm.name },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.name = $event.target.value
+                },
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group pb-2" }, [
+            _c("label", { attrs: { for: "description" } }, [
+              _vm._v("Beschreibung"),
+            ]),
+            _vm._v(" "),
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.description,
+                  expression: "description",
+                },
+              ],
+              staticClass: "form-control",
+              attrs: {
+                placeholder: "Beschreibung der Con",
+                name: "description",
+                rows: "20",
+              },
+              domProps: { value: _vm.description },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.description = $event.target.value
+                },
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "date" } }, [_vm._v("Datum")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex flex-row" }, [
+              _c("div", { staticClass: "d-flex flex-column" }, [
+                _c("label", { attrs: { for: "date_start" } }, [
+                  _vm._v("von: "),
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.date_start,
+                      expression: "date_start",
+                    },
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "date", name: "date_start" },
+                  domProps: { value: _vm.date_start },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.date_start = $event.target.value
+                    },
+                  },
+                }),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "d-flex flex-column pb-2" }, [
+                _c("label", { attrs: { for: "date_end" } }, [_vm._v("bis: ")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.date_end,
+                      expression: "date_end",
+                    },
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "date", name: "date_end" },
+                  domProps: { value: _vm.date_end },
+                  on: {
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.date_end = $event.target.value
+                    },
+                  },
+                }),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group pb-2" }, [
+            _c("label", { attrs: { for: "sc_count" } }, [_vm._v("SC-Anzahl")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.sc_count,
+                  expression: "sc_count",
+                },
+              ],
+              staticClass: "form-control",
+              attrs: { type: "number", name: "sc_count", placeholder: "20" },
+              domProps: { value: _vm.sc_count },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.sc_count = $event.target.value
+                },
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group pb-2" }, [
+            _c("label", { attrs: { for: "nsc_count" } }, [
+              _vm._v("NSC-Anzahl"),
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.nsc_count,
+                  expression: "nsc_count",
+                },
+              ],
+              staticClass: "form-control",
+              attrs: { type: "number", name: "nsc_count", placeholder: "20" },
+              domProps: { value: _vm.nsc_count },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.nsc_count = $event.target.value
+                },
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group pb-2" }, [
+            _c("label", { attrs: { for: "sc_price" } }, [
+              _vm._v("Spielerpreis"),
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.sc_price,
+                  expression: "sc_price",
+                },
+              ],
+              staticClass: "form-control",
+              attrs: { type: "number", name: "sc_price", placeholder: "20" },
+              domProps: { value: _vm.sc_price },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.sc_price = $event.target.value
+                },
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group pb-2" }, [
+            _c("label", { attrs: { for: "nsc_price" } }, [_vm._v("Nsc-Preis")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.nsc_price,
+                  expression: "nsc_price",
+                },
+              ],
+              staticClass: "form-control",
+              attrs: { type: "number", name: "nsc_price", placeholder: "20" },
+              domProps: { value: _vm.nsc_price },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.nsc_price = $event.target.value
+                },
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group pb-2" }, [
+            _c("label", { attrs: { for: "foor_price" } }, [
+              _vm._v("Preis Vollverpflegung"),
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.food_price,
+                  expression: "food_price",
+                },
+              ],
+              staticClass: "form-control",
+              attrs: { type: "number", name: "food_price", placeholder: "20" },
+              domProps: { value: _vm.food_price },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.food_price = $event.target.value
+                },
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group pb-2" }, [
+            _c("label", { attrs: { for: "has_registration" } }, [
+              _vm._v("Mit Anmeldung?"),
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.has_registration,
+                  expression: "has_registration",
+                },
+              ],
+              attrs: {
+                type: "radio",
+                name: "has_registration",
+                value: "false",
+                checked: "",
+              },
+              domProps: { checked: _vm._q(_vm.has_registration, "false") },
+              on: {
+                change: function ($event) {
+                  _vm.has_registration = "false"
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c(
+              "label",
+              {
+                staticClass: "form-check-label",
+                attrs: { for: "has_registration_0" },
+              },
+              [_vm._v("ohne")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.has_registration,
+                  expression: "has_registration",
+                },
+              ],
+              attrs: { type: "radio", name: "has_registration", value: "true" },
+              domProps: { checked: _vm._q(_vm.has_registration, "true") },
+              on: {
+                change: function ($event) {
+                  _vm.has_registration = "true"
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c(
+              "label",
+              {
+                staticClass: "form-check-label",
+                attrs: { for: "has_registration_1" },
+              },
+              [_vm._v("mit")]
+            ),
+          ]),
+          _vm._v(" "),
+          _vm.has_registration
+            ? _c("div", [
+                _c("hr"),
+                _vm._v(" "),
+                _c("h5", { staticClass: "card-subtitle text-muted" }, [
+                  _vm._v("Welche Angaben sollen deine Spieler machen?"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_first_name,
+                        expression: "reg_first_name",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_first_name",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_first_name)
+                        ? _vm._i(_vm.reg_first_name, null) > -1
+                        : _vm.reg_first_name,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_first_name,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_first_name = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_first_name = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_first_name = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_first_name" },
+                    },
+                    [_vm._v("Vorname")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_last_name,
+                        expression: "reg_last_name",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_last_name",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_last_name)
+                        ? _vm._i(_vm.reg_last_name, null) > -1
+                        : _vm.reg_last_name,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_last_name,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_last_name = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_last_name = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_last_name = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_last_name" },
+                    },
+                    [_vm._v("Nachname")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_adress,
+                        expression: "reg_adress",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_adress",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_adress)
+                        ? _vm._i(_vm.reg_adress, null) > -1
+                        : _vm.reg_adress,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_adress,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_adress = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_adress = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_adress = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_adress" },
+                    },
+                    [_vm._v("Adresse")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_birthdate,
+                        expression: "reg_birthdate",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_birthdate",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_birthdate)
+                        ? _vm._i(_vm.reg_birthdate, null) > -1
+                        : _vm.reg_birthdate,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_birthdate,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_birthdate = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_birthdate = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_birthdate = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_birthdate" },
+                    },
+                    [_vm._v("Geburtstag")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_mail,
+                        expression: "reg_mail",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: { type: "checkbox", name: "reg_mail", checked: "" },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_mail)
+                        ? _vm._i(_vm.reg_mail, null) > -1
+                        : _vm.reg_mail,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_mail,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_mail = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_mail = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_mail = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_mail" },
+                    },
+                    [_vm._v("Email")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_supervisor,
+                        expression: "reg_supervisor",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_supervisor",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_supervisor)
+                        ? _vm._i(_vm.reg_supervisor, null) > -1
+                        : _vm.reg_supervisor,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_supervisor,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_supervisor = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_supervisor = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_supervisor = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_supervisor" },
+                    },
+                    [_vm._v("Aufsichtsperson")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_char_name,
+                        expression: "reg_char_name",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_char_name",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_char_name)
+                        ? _vm._i(_vm.reg_char_name, null) > -1
+                        : _vm.reg_char_name,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_char_name,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_char_name = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_char_name = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_char_name = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_char_name" },
+                    },
+                    [_vm._v("Charaktername")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_char_profession,
+                        expression: "reg_char_profession",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_char_profession",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_char_profession)
+                        ? _vm._i(_vm.reg_char_profession, null) > -1
+                        : _vm.reg_char_profession,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_char_profession,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 &&
+                              (_vm.reg_char_profession = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_char_profession = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_char_profession = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_char_profession" },
+                    },
+                    [_vm._v("Beruf des Charakters")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_char_race,
+                        expression: "reg_char_race",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_char_race",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_char_race)
+                        ? _vm._i(_vm.reg_char_race, null) > -1
+                        : _vm.reg_char_race,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_char_race,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_char_race = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_char_race = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_char_race = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_char_race" },
+                    },
+                    [_vm._v("Spezies")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_char_group,
+                        expression: "reg_char_group",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_char_group",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_char_group)
+                        ? _vm._i(_vm.reg_char_group, null) > -1
+                        : _vm.reg_char_group,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_char_group,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_char_group = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_char_group = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_char_group = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_char_group" },
+                    },
+                    [_vm._v("Gruppe des Charakters")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_known_nsc,
+                        expression: "reg_known_nsc",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_known_nsc",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_known_nsc)
+                        ? _vm._i(_vm.reg_known_nsc, null) > -1
+                        : _vm.reg_known_nsc,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_known_nsc,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_known_nsc = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_known_nsc = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_known_nsc = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_known_nsc" },
+                    },
+                    [_vm._v("Nsc, die der Charakter kennt")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_char_history,
+                        expression: "reg_char_history",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_char_history",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_char_history)
+                        ? _vm._i(_vm.reg_char_history, null) > -1
+                        : _vm.reg_char_history,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_char_history,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 &&
+                              (_vm.reg_char_history = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_char_history = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_char_history = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_char_history" },
+                    },
+                    [_vm._v("Charaktergeschichte")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_char_magic,
+                        expression: "reg_char_magic",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_char_magic",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_char_magic)
+                        ? _vm._i(_vm.reg_char_magic, null) > -1
+                        : _vm.reg_char_magic,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_char_magic,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_char_magic = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_char_magic = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_char_magic = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_char_magic" },
+                    },
+                    [_vm._v("Magiebegabung")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_allergies,
+                        expression: "reg_allergies",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_allergies",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_allergies)
+                        ? _vm._i(_vm.reg_allergies, null) > -1
+                        : _vm.reg_allergies,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_allergies,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_allergies = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_allergies = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_allergies = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_allergies" },
+                    },
+                    [_vm._v("Allergien")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_tents,
+                        expression: "reg_tents",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: { type: "checkbox", name: "reg_tents", checked: "" },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_tents)
+                        ? _vm._i(_vm.reg_tents, null) > -1
+                        : _vm.reg_tents,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_tents,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_tents = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_tents = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_tents = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_tents" },
+                    },
+                    [_vm._v("Zelte")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_pkw,
+                        expression: "reg_pkw",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: { type: "checkbox", name: "reg_pkw", checked: "" },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_pkw)
+                        ? _vm._i(_vm.reg_pkw, null) > -1
+                        : _vm.reg_pkw,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_pkw,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_pkw = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_pkw = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_pkw = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_pkw" },
+                    },
+                    [_vm._v("Pkw")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_newsletter,
+                        expression: "reg_newsletter",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_newsletter",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_newsletter)
+                        ? _vm._i(_vm.reg_newsletter, null) > -1
+                        : _vm.reg_newsletter,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_newsletter,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_newsletter = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_newsletter = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_newsletter = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_newsletter" },
+                    },
+                    [_vm._v("Newsletter-Teilnahme")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_first_time,
+                        expression: "reg_first_time",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_first_time",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_first_time)
+                        ? _vm._i(_vm.reg_first_time, null) > -1
+                        : _vm.reg_first_time,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_first_time,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_first_time = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_first_time = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_first_time = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_first_time" },
+                    },
+                    [_vm._v("Zum ersten Mal da?")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_plot_wishes,
+                        expression: "reg_plot_wishes",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_plot_wishes",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_plot_wishes)
+                        ? _vm._i(_vm.reg_plot_wishes, null) > -1
+                        : _vm.reg_plot_wishes,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_plot_wishes,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_plot_wishes = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_plot_wishes = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_plot_wishes = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_plot_wishes" },
+                    },
+                    [_vm._v("Plotwünsche")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_con_wishes,
+                        expression: "reg_con_wishes",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_con_wishes",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_con_wishes)
+                        ? _vm._i(_vm.reg_con_wishes, null) > -1
+                        : _vm.reg_con_wishes,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_con_wishes,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_con_wishes = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_con_wishes = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_con_wishes = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_con_wishes" },
+                    },
+                    [_vm._v("Conwünsche")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_corona,
+                        expression: "reg_corona",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: {
+                      type: "checkbox",
+                      name: "reg_corona",
+                      checked: "",
+                    },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_corona)
+                        ? _vm._i(_vm.reg_corona, null) > -1
+                        : _vm.reg_corona,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_corona,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_corona = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_corona = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_corona = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_corona" },
+                    },
+                    [_vm._v("Coronaregeln")]
+                  ),
+                  _vm._v(" "),
+                  _vm.reg_corona
+                    ? _c("textarea", {
+                        staticClass: "form-control",
+                        attrs: { rows: "10", name: "reg_corona_text" },
+                      })
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.reg_agb,
+                        expression: "reg_agb",
+                      },
+                    ],
+                    staticClass: "form-check-input",
+                    attrs: { type: "checkbox", name: "reg_agb", checked: "" },
+                    domProps: {
+                      checked: Array.isArray(_vm.reg_agb)
+                        ? _vm._i(_vm.reg_agb, null) > -1
+                        : _vm.reg_agb,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.reg_agb,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = null,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 && (_vm.reg_agb = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.reg_agb = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.reg_agb = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "form-check-label",
+                      attrs: { for: "reg_agb" },
+                    },
+                    [_vm._v("Coronaregeln")]
+                  ),
+                  _vm._v(" "),
+                  _vm.reg_agb
+                    ? _c("textarea", {
+                        staticClass: "form-control",
+                        attrs: { rows: "10", name: "reg_agb_text" },
+                      })
+                    : _vm._e(),
+                ]),
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary",
+              attrs: { type: "button" },
+              on: { click: _vm.send_event },
+            },
+            [_vm._v("abschicken")]
+          ),
+        ]),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h4", { staticClass: "card-title" }, [_vm._v("Con erstellen")]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=template&id=4c2792e1&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/orga/Orga.vue?vue&type=template&id=4c2792e1&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "main" },
+    [
+      _c("h1", [_vm._v(" " + _vm._s(_vm.orga.name) + " ")]),
+      _vm._v(" "),
+      !_vm.changeDescriptionState
+        ? _c("div", [
+            _c("p", { attrs: { id: "description" } }, [
+              _vm._v(" " + _vm._s(_vm.orga.description) + " "),
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "align-self-center mt-2 btn btn-primary",
+                attrs: { type: "button" },
+                on: { click: _vm.changeDescription },
+              },
+              [_vm._v("Beschreibung ändern")]
+            ),
+          ])
+        : _c("div", { staticClass: "d-flex flex-column" }, [
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.orga.description,
+                  expression: "orga.description",
+                },
+              ],
+              attrs: { rows: "10" },
+              domProps: { value: _vm.orga.description },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.orga, "description", $event.target.value)
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex flex-row" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "align-self-center mt-2 btn btn-primary",
+                  attrs: { type: "button" },
+                  on: { click: _vm.submitDescription },
+                },
+                [_vm._v("Beschreibung ändern")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "align-self-center mt-2 btn btn-primary",
+                  attrs: { type: "button" },
+                  on: { click: _vm.abortDescription },
+                },
+                [_vm._v("abbrechen")]
+              ),
+            ]),
+          ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("div", { staticClass: "utilities" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary mt-2",
+            attrs: { type: "button" },
+            on: { click: _vm.showEventform },
+          },
+          [_vm._v("Neue Con erstellen")]
+        ),
+      ]),
+      _vm._v(" "),
+      _vm.eventform ? _c("eventform") : _vm._e(),
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

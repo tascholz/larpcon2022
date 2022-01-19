@@ -15,14 +15,4 @@ Vue.use(VueRouter);
 const app = new Vue({
     el: '#app',
     router,
-
-    // async beforeCreate() {
-    //     await axios.get('sanctum/csrf-cookie');
-    //     await axios.post("/login", {
-    //         email: "tjark@admin.de",
-    //         password: "test1234"
-    //     });
-
-    //     await axios.get('/user');
-    // },
 });
