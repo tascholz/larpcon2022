@@ -3,6 +3,8 @@ import Landing from "./main/Landing";
 import User from "./user/User";
 import Orga from "./orga/Orga";
 import Calendar from "./events/Calendar";
+import Event from "./events/Event";
+import EventRegistration from "./events/EventRegistration"
 
 import Login from "./auth/Login";
 
@@ -34,6 +36,16 @@ const routes = [
         component: Login,
         name: "login"
     },
+    {
+        path: "/event/:id",
+        component: Event,
+        name: "event"
+    },
+    {
+        path: "registration/:id",
+        component: EventRegistration,
+        name: 'registration'
+    }
 ];
 
 const router = new VueRouter({

@@ -26,8 +26,10 @@
                                 <label for="date_end">bis: </label>
                                 <input type="date" class="form-control" name="date_end" v-model="date_end"/>                           
                             </div>
-                            
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="image" placeholder="Choose Image" id="image">
                     </div>
 
                     <div class="form-group pb-2">
@@ -47,7 +49,7 @@
                         <input type="number" class="form-control" name="nsc_price" placeholder="20" v-model="nsc_price"/>
                     </div>
                     <div class="form-group pb-2">
-                        <label for="foor_price">Preis Vollverpflegung</label>
+                        <label for="foor_price">Preis Vollverpflegung (0 eintragen, wenn es keine Vollverpflegung gibt</label>
                         <input type="number" class="form-control" name="food_price" placeholder="20" v-model="food_price"/>
                     </div>
 
@@ -154,13 +156,15 @@
                         <hr />
                         <div class="form-group">
                             <input type="checkbox" class="form-check-input" name="reg_corona" v-model="reg_corona" checked>
-                            <label for="reg_corona" class="form-check-label">Coronaregeln</label>
+                            <label for="reg_corona" class="form-check-label">Die Spieler sollen folgende Coronaregeln akzeptieren:</label>
                             <textarea class="form-control" rows="10" name="reg_corona_text" v-if="reg_corona"/>
+                            <p v-else>keine</p>
                         </div>
                         <div class="form-group">
                             <input type="checkbox" class="form-check-input" name="reg_agb" v-model="reg_agb" checked>
-                            <label for="reg_agb" class="form-check-label">Coronaregeln</label>
+                            <label for="reg_agb" class="form-check-label">Die Spieler sollen folgende AGBs akzeptieren</label>
                             <textarea class="form-control" rows="10" name="reg_agb_text" v-if="reg_agb"/>
+                            <p v-else>keine</p>
                         </div>
                         
                         
@@ -213,7 +217,9 @@ export default {
             reg_corona: true,
             reg_corona_text: "",
             reg_agb: true,
-            reg_agb_text: ""
+            reg_agb_text: "",
+            image: null,
+            image_path: null,
 
         }
     },
@@ -228,6 +234,9 @@ export default {
                 this.orga_id = response.data.orga_id
             });
 
+            await this.saveImage();
+            console.log('image path:')
+            console.log(this.image_path);
             await axios.post("/events", {
                 'name' : this.name,
                 'orga_id': this.orga_id,
@@ -263,7 +272,24 @@ export default {
                 "reg_corona": this.reg_corona,
                 "reg_coronta_text": this.reg_corona_text,
                 "reg_agb": this.reg_agb,
-                "reg_agb_text": this.reg_agb_text
+                "reg_agb_text": this.reg_agb_text,
+                "image_path": this.image_path
+            });
+            
+        },
+
+        async saveImage() {
+            
+            let photo = document.getElementById('image').files[0];
+            console.log(photo);
+            let data = new FormData();
+            data.append('photo', photo, photo.name)
+            
+            await axios.post('/saveImage', data).then(response => {
+                console.log(response);
+                this.image_path = response.data;
+            }).catch(response => {
+                console.log(response)
             })
         }
     },

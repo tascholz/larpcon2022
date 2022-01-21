@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
-use App\Models\Photo;
+use App\Models\Registration;
 use Illuminate\Http\Request;
 
-class EventController extends Controller
+class RegistrationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        return Event::all();
+        return Registration::all();
     }
 
     /**
@@ -26,18 +25,18 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        return Event::create($request->all());
+        return Registration::create($request->all());
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Registration  $registration
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        return Event::find($id);
+        return Registration::find($id);
     }
 
 
@@ -45,35 +44,24 @@ class EventController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Registration  $registration
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $event = Event::find($id);
-        $event->update($request->all());
-        return $event;
+        $registration = Registration::find($id);
+        $registration->update($request->all());
+        return $registration;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Registration  $registration
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        return Event::destroy($id);
-    }
-
-    public function saveImage(Request $request)
-    {
-        $request->photo->store('games');
-        
-        $photo = new Photo;
-        $photo->name = $request->photo->getClientOriginalName();
-        $photo->path = $request->photo->store('public/images');
-        $photo->event_id = $request->event_id;
-        return $photo->path;
+        return Registration::destroy($id);
     }
 }

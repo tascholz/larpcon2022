@@ -1,23 +1,23 @@
 <template>
-    <div class="main">
+    <div class="main" v-if="!loading">
         <h1> {{orga.name }} </h1>
 
         <div v-if="!changeDescriptionState">
             <p id="description"> {{orga.description }} </p>
-            <button class="align-self-center mt-2 btn btn-primary" type="button" v-on:click = "changeDescription">Beschreibung ändern</button>
+            <button class="align-self-center mt-2 btn btn-success" type="button" v-on:click = "changeDescription">Beschreibung ändern</button>
         </div>
         <div class="d-flex flex-column" v-else>
             <textarea rows=10 v-model="orga.description"/>
             <div class="d-flex flex-row">
-                <button class="align-self-center mt-2 btn btn-primary" type="button" v-on:click="submitDescription">Beschreibung ändern</button>
-                <button class="align-self-center mt-2 btn btn-primary" type="button" v-on:click="abortDescription">abbrechen</button>
+                <button class="align-self-center mt-2 btn btn-success" type="button" v-on:click="submitDescription">Beschreibung ändern</button>
+                <button class="align-self-center mt-2 btn btn-success" type="button" v-on:click="abortDescription">abbrechen</button>
             </div>
             
         </div>
         
         <hr />
         <div class="utilities">
-            <button class="btn btn-primary mt-2" type="button" v-on:click="showEventform">Neue Con erstellen</button>
+            <button class="btn btn-success mt-2" type="button" v-on:click="showEventform">Neue Con erstellen</button>
         </div>
         <!-- <div class="utilities">
             <router-link to="newevent">
@@ -27,6 +27,7 @@
 
         <eventform v-if="eventform"></eventform>
     </div>
+    <div v-else>loading...</div>
 </template>
 
 <script>
@@ -57,7 +58,6 @@ export default {
         },
 
         abortDescription() {
-            console.log("abort")
             window.location.reload();
         },
 
@@ -76,7 +76,6 @@ export default {
         });
 
         await axios.get(`/api/orgas/${this.user.orga_id}`).then(response =>{
-            console.log(`/api/orgas/${this.user.orga_id}`)
             this.orga = response.data;
             this.loading = false;
         })

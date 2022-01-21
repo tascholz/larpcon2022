@@ -57,6 +57,8 @@ class CreateEventsTable extends Migration
             $table->text('reg_corona_text')->nullable();
             $table->boolean('reg_agb')->default("0");
             $table->boolean('reg_agb_text')->nullable();
+            
+            $table->string('image_path')->nullable();
         });
     }
 

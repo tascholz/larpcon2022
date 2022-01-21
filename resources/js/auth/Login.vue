@@ -10,7 +10,7 @@
                         <input type="password" class="form-control" placeholder="Your Password" name="password" v-model="password">
 
                         <div class="d-grid gap-2 pt-2">
-                            <button class="btn btn-primary" type=button v-on:click = "testLogin">Login</button>
+                            <button class="btn btn-success" type=button v-on:click = "testLogin">Login</button>
                         </div>
                     </div>
                 </form>
@@ -41,23 +41,28 @@ export default {
 
             await axios.get('/user')
                 .then(response => {
-                    window.location.reload();
+                    this.redirect();
                 });
         },
 
-        async initLogin() {
-            await axios.get('/sanctum/csrf-cookie').then(response => {
-                this.login();
-            });
-                
-        },
+         async redirect() {
+             await this.$router.push({name: 'home'});
+             window.location.reload();
+         }
 
-        async login() {
-            axios.post('/login', {
-                email: "admin@admin.de",
-                password: "testtest"
-            })
-        }
+        // async initLogin() {
+        //     await axios.get('/sanctum/csrf-cookie').then(response => {
+        //         this.login();
+        //     });
+                
+        // },
+
+        // async login() {
+        //     axios.post('/login', {
+        //         email: "admin@admin.de",
+        //         password: "testtest"
+        //     })
+        // }
     }
 }
 </script>

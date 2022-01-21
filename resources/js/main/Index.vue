@@ -38,7 +38,7 @@
             </div>
         </nav>
         <div class="background">
-            <div class="col-md-8 content">
+            <div class="col-md-10 p-2 content">
                 <router-view></router-view>
             </div>
 
@@ -57,16 +57,31 @@ export default {
 
     methods: {
         logout() {
-            axios.post('/logout');
-            this.$router.push('home');
-            window.location.reload();
-        }
+            axios.post('/logout').then(response =>{
+               this.redirect(); 
+            });
+        },
+
+        async redirect() {
+             //await this.$router.push({name: 'home'});
+             window.location.reload();
+         }
     },
 
     created() {
         axios.get('/user').then(response =>{
-            this.user = response.data;
-            this.orga_id = response.data.orga_id;
+            
+            if ( response.status !== 200){
+                throw new Error(response.status)
+            }
+            else {
+                this.user = response.data;
+                this.orga_id = response.data.orga_id;
+            }
+
+        })
+        .catch(function(error){
+            console.log("user is not logged in")
         });
     }
 }

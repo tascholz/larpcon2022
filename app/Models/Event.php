@@ -44,11 +44,17 @@ class Event extends Model
         'reg_corona',
         'reg_corona_text',
         'reg_agb',
-        'reg_agb_text'
+        'reg_agb_text',
+        'image_path'
     ];
 
     public function orga()
     {
         return $this->belongsTo(Orga::class);
+    }
+
+    public function photo()
+    {
+        return $this->hasOne(Event::class);
     }
 }

@@ -52,4 +52,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/orgas', [OrgaController::class, 'store']);
     Route::put('/orgas/{id}', [OrgaController::class, 'update']);
     Route::delete('/orgas/{id}', [OrgaController::class, 'destroy']);
+
+    Route::get('/showImage/{id}', [EventController::class, 'showImage']);
+    Route::post('/saveImage', [EventController::class, 'saveImage']); 
     });
