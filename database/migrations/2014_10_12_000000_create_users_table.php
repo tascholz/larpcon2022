@@ -22,6 +22,14 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
 
+            $table->string('user_first_name')->nullable();
+            $table->string('user_last_name')->nullable();
+            $table->date('user_birthdate')->nullable();
+            $table->string('user_street')->nullable();
+            $table->string('user_pcode')->nullable();
+            $table->string('user_city')->nullable();
+
+
             $table->integer('orga_id')->nullable();
         });
     }

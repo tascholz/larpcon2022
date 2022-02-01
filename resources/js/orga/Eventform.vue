@@ -61,7 +61,7 @@
                         <label for="has_registration_1" class="form-check-label">mit</label>
                     </div>
                     
-                    <div v-if="has_registration">
+                    <div v-if="has_registration == 'true'">
                         <hr />
                         <h5 class="card-subtitle text-muted">Welche Angaben sollen deine Spieler machen?</h5>
                         <div class="form-group">
@@ -166,9 +166,11 @@
                             <textarea class="form-control" rows="10" name="reg_agb_text" v-if="reg_agb"/>
                             <p v-else>keine</p>
                         </div>
+
                         
                         
                     </div>
+                    <div v-else>Ohne Anmeldung</div>
                     <button type="button" v-on:click="send_event" class="btn btn-primary">abschicken</button>
                 </form>
                 
@@ -225,11 +227,15 @@ export default {
     },
 
     methods: {
-        has_registration_flip() {
-            this.has_registration = !this.has_registration;
-        },
 
         async send_event() {
+            if (this.has_registration == "true") {
+                this.has_registration = 1
+            }
+            else {
+                this.has_registration = 0
+            }
+
             await axios.get('/user').then(response => {
                 this.orga_id = response.data.orga_id
             });
@@ -294,12 +300,6 @@ export default {
         }
     },
 
-    // async created() {
-    //     await axios.get('/user').then(response => {
-    //         this.orga_id = response.data.orga_id;
-    //     });
-
-    // }
 }
 </script>
 

@@ -55,4 +55,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::get('/showImage/{id}', [EventController::class, 'showImage']);
     Route::post('/saveImage', [EventController::class, 'saveImage']); 
+
+    Route::get('/orgaEventList', function (Request $request) {
+        return "Test";
+        return auth()->user()->orga->events;
+    });
     });

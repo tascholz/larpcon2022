@@ -24,7 +24,7 @@ class RegistrationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
         return Registration::create($request->all());
     }
 
@@ -63,5 +63,10 @@ class RegistrationController extends Controller
     public function destroy($id)
     {
         return Registration::destroy($id);
+    }
+
+    public function getRegistrations($id)
+    {
+        return auth()->user()->orga->events->where('id', $id)->first()->registrations;
     }
 }

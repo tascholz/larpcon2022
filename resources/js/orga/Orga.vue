@@ -18,6 +18,7 @@
         <hr />
         <div class="utilities">
             <button class="btn btn-success mt-2" type="button" v-on:click="showEventform">Neue Con erstellen</button>
+            <button class="btn btn-success mt-2" type="button" v-on:click="showEventList">Cons anzeigen</button>
         </div>
         <!-- <div class="utilities">
             <router-link to="newevent">
@@ -26,15 +27,18 @@
         </div> -->
 
         <eventform v-if="eventform"></eventform>
+        <event-list v-if="eventList"></event-list>
     </div>
     <div v-else>loading...</div>
 </template>
 
 <script>
 import Eventform from './Eventform.vue';
+import EventList from './EventList.vue'
 export default {
     components: {
-        Eventform
+        Eventform,
+        EventList
     },
 
     data() {
@@ -44,6 +48,7 @@ export default {
             orga: null,
             changeDescriptionState : false,
             eventform: false,
+            eventList: false
 
         }
     },
@@ -51,6 +56,11 @@ export default {
     methods: {
         showEventform() {
             this.eventform = !this.eventform;
+            this.eventList = false
+        },
+        showEventList() {
+            this.eventList = !this.eventList;
+            this.eventform = false
         },
 
         changeDescription() {

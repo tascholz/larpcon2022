@@ -13,14 +13,22 @@
                         <p class="card-text">NSC Preis: {{event.price_nsc}}</p>
                     </div>
                     <div class="col-md-6">
-                        <img :src="image_path" v-if="image_path">
+                        <img :src="image_path" 
+                            class="thumbnail"
+                            v-if="image_path"
+                            width="400px"
+                            v-on:click="toggleImageCard">
                     </div>
                 </div>                
-                    <button class="btn btn-success" type="button" v-on:click="toRegistration">Zur Anmeldung</button>
+                    <button class="btn btn-success" type="button" v-on:click="toRegistration" v-if="event.has_registration">Zur Anmeldung</button>
 
             </div>
         </div>
         <div v-else>loading...</div>
+
+        <div class="image-container" v-on:click="toggleImageCard" v-if="showImage">
+            <img :src="image_path" class="img-card" alt="...">
+        </div>
     </div>
 </template>
 
@@ -34,6 +42,7 @@ export default {
             date_end : null,
             image_path: null,
             image: null,
+            showImage: false,
         }
     },
 
@@ -54,6 +63,10 @@ export default {
     methods: {
         toRegistration() {
             this.$router.push({name: 'registration', params: {eventId: this.event.id}});
+        },
+
+        toggleImageCard() {
+            this.showImage = !this.showImage
         }
     },
 
@@ -63,5 +76,27 @@ export default {
 <style scoped>
     .card {
         color: rgb(59, 59, 59);
+    }
+
+    .thumbnail:hover {
+        cursor: pointer;
+    }
+
+    .image-container {
+        position: fixed;
+        top: 5%;
+        bottom: 5%;
+        left: 10%;
+        right: 10%;
+        
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-card {
+        height: 90%;
+      ;
     }
 </style>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
-use App\Models\Photo;
+ use App\Models\Photo;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -70,10 +70,18 @@ class EventController extends Controller
     {
         $request->photo->store('games');
         
-        $photo = new Photo;
-        $photo->name = $request->photo->getClientOriginalName();
-        $photo->path = $request->photo->store('public/images');
-        $photo->event_id = $request->event_id;
-        return $photo->path;
+        // $photo = new Photo;
+        // $photo->name = $request->photo->getClientOriginalName();
+        // $photo->path = $request->photo->store('public/images');
+        // $photo->event_id = $request->event_id;
+        // return $photo->path;
+
+        $path = $request->photo->store('public/images');
+        return $path;
+    }
+
+    public function showOrgaEventList()
+    {
+        return $events = auth()->user()->orga->events;
     }
 }

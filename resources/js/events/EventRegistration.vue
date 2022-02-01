@@ -3,6 +3,10 @@
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Anmeldung</h4>
+                <button 
+                    v-on:click="formAutofill" 
+                    v-if="user != null"
+                    class="btn btn-success">automatisch ausfüllen</button>
             </div>
             <div class="card-body col-md-6">
                 <div class="form">
@@ -11,13 +15,21 @@
                         <label for="first_name">Vorname</label>
                         <input type="text" class="form-control" name="first_name" v-model="reg_first_name">
                     </div>
-                    <div class="form-group" v-if="event.last_name == 1">
+                    <div class="form-group" v-if="event.reg_last_name == 1">
                         <label for="last_name">Nachname</label>
-                        <input type="text" class="form-control" name="last_name" v-model="last_name">
+                        <input type="text" class="form-control" name="last_name" v-model="reg_last_name">
                     </div>
                     <div class="form-group" v-if="event.reg_adress == 1">
-                        <label for="adress">Adresse</label>
-                        <input type="text" class="form-control" name="adress" v-model="reg_adress">
+                        <label for="adress">Straße und Hausnummer</label>
+                        <input type="text" class="form-control" name="adress" v-model="reg_adress_street">
+                    </div>
+                    <div class="form-group" v-if="event.reg_adress == 1">
+                        <label for="adress">Postleitzahl</label>
+                        <input type="text" class="form-control" name="adress" v-model="reg_adress_pcode">
+                    </div>
+                    <div class="form-group" v-if="event.reg_adress == 1">
+                        <label for="adress">Ort</label>
+                        <input type="text" class="form-control" name="adress" v-model="reg_adress_city">
                     </div>
                     <div class="form-group" v-if="event.reg_birthdate == 1">
                         <label for="birthdate">Geburtstag</label>
@@ -153,7 +165,7 @@
                     </div>
 
                     <div class="form-group" v-if="event.reg_con_wishes == 1">
-                        <label for="con_wishes">Plotwünsche</label>
+                        <label for="con_wishes">Wünsche an die Con</label>
                         <textarea class="form-control" name="con_wishes" rows="10" v-model="reg_con_wishes"/>
                     </div>
 
@@ -181,11 +193,14 @@
 export default {
     data() {
         return {
+            user: null,
             loading: false,
             event: null,
             reg_first_name: null,
             reg_last_name: null,
-            reg_adress: null,
+            reg_adress_street: null,
+            reg_adress_pcode: null,
+            reg_adress_city: null,
             reg_birthdate: null,
             reg_mail: null,
             reg_supervisor: null,
@@ -212,17 +227,36 @@ export default {
 
     methods: {
         submitForm() {
-            axios.post('./registrations', {
-                'reg_first_name': this.reg_first_time,
+            if (this.reg_food == "nein"){
+                this.reg_food = 0;
+            } else {
+                this.reg_food = 1
+            }
+            if (this.reg_newsletter == "nein"){
+                this.reg_newsletter = 0;
+            } else {
+                this.reg_newsletter = 1
+            }
+            if (this.reg_first_time == "nein"){
+                this.reg_first_time = 0;
+            } else {
+                this.reg_first_time = 1
+            }
+
+            axios.post('/api/registrations', {
+                'event_id': String(this.event.id),
+                'reg_first_name': this.reg_first_name,
                 'reg_last_name': this.reg_last_name,
-                'reg_adress': this.reg_adress,
+                'reg_adress_street': this.reg_adress_street,
+                'reg_adress_pcode': this.reg_adress_pcode,
+                'reg_adress_city': this.reg_adress_city,
                 'reg_birthdate': this.reg_birthdate,
                 'reg_mail': this.reg_mail,
                 'reg_supervisor': this.reg_supervisor,
                 'reg_food': this.reg_food,
                 'reg_char_name': this.reg_char_name,
                 'reg_char_profession': this.reg_char_profession,
-                'reg_char_race': this.char_race,
+                'reg_char_race': this.reg_char_race,
                 'reg_char_group': this.reg_char_group,
                 'reg_known_nsc': this.reg_known_nsc,
                 'reg_char_history': this.reg_char_history,
@@ -237,7 +271,16 @@ export default {
                 'reg_corona': this.reg_corona,
                 'reg_agb': this.reg_agb
             });
-        }
+        },
+
+        formAutofill() {
+            this.reg_first_name = this.user.user_first_name;
+            this.reg_last_name = this.user.user_last_name;
+            this.reg_adress_street = this.user.user_street;
+            this.reg_adress_pcode = this.user.user_pcode;
+            this.reg_adress_city = this.user.user_city;
+            this.reg_birthdate= this.user.user_birthdate;
+        },
     },
 
     async created() {
@@ -245,9 +288,12 @@ export default {
         this.eventId = this.$route.params.id;
         await axios.get(`/api/events/${this.$route.params.id}`).then(response => {
             this.event = response.data;
-            
-            this.loading = false;
         });
+
+        await axios.get('/user').then(response =>{
+            this.user = response.data;
+            this.loading = false;
+        })
     }
 }
 </script>

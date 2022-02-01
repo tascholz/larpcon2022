@@ -17,29 +17,37 @@ class CreateRegistrationsTable extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('adress');
-            $table->date('birthdate');
-            $table->string('mail');
-            $table->string('supervisor');
+            $table->integer('event_id');
+
+            $table->string('reg_first_name');
+            $table->string('reg_last_name');
+            $table->string('reg_adress_street');
+            $table->string('reg_adress_pcode');
+            $table->string('reg_adress_city');
+            $table->date('reg_birthdate');
+            $table->string('reg_mail');
+            $table->string('reg_supervisor');
+            $table->boolean('reg_food');
             
-            $table->string('char_name');
-            $table->string('char_profession');
-            $table->string('char_race');
-            $table->string('char_group');
-            $table->text('known_nsc');
-            $table->text('char_history');
-            $table->string('char_magic');
+            $table->string('reg_char_name');
+            $table->string('reg_char_profession');
+            $table->string('reg_char_race');
+            $table->string('reg_char_group');
+            $table->text('reg_known_nsc');
+            $table->text('reg_char_history');
+            $table->string('reg_char_magic');
 
-            $table->text('allergies');
-            $table->string('tents');
-            $table->string('pkw');
+            $table->text('reg_allergies');
+            $table->string('reg_tents');
+            $table->string('reg_pkw');
 
-            $table->boolean('newsletter');
-            $table->boolean('first_time');
-            $table->text('plot_wishes');
-            $table->text('con_wishes');
+            $table->boolean('reg_newsletter');
+            $table->boolean('reg_first_time');
+            $table->text('reg_plot_wishes');
+            $table->text('reg_con_wishes');
+            $table->string('reg_corona');
+            $table->string('reg_agb');
+
         });
     }
 

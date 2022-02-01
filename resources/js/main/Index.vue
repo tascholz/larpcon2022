@@ -35,7 +35,7 @@
                     <router-link class="nav-link nav-custom" :to="{name: 'login'}" v-else>Login</router-link>
                 </li>
                 </ul>
-            </div>
+            </div> 
         </nav>
         <div class="background">
             <div class="col-md-10 p-2 content">
