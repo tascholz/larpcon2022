@@ -34881,10 +34881,48 @@ var staticRenderFns = [
     return _c("div", [
       _c("h1", [_vm._v("Larpcons")]),
       _vm._v(" "),
+      _c("p", [_vm._v("Willkommen auf Larpcons.de")]),
+      _vm._v(" "),
       _c("p", [
         _vm._v(
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, saepe quos ex voluptatum vitae veniam porro pariatur, ab rerum accusantium maxime deleniti officiis quibusdam ratione atque itaque at illo. Quo quia dolor, recusandae cumque similique veniam doloribus voluptatem? Ipsum quibusdam veniam impedit, obcaecati explicabo accusantium hic iste aut dolor voluptatem incidunt nihil dolorum dolores ullam. Saepe sit harum voluptatibus placeat quis beatae earum atque, deleniti dolore exercitationem similique eos, dignissimos odit facilis tempore cupiditate voluptate eaque? Maxime omnis impedit at iusto rem iste! Itaque asperiores sapiente consequatur non, quisquam iste blanditiis, corrupti ipsam quo, laboriosam beatae! Ad doloribus inventore eaque?"
+          "Diese Seite befindet sich noch im Aufbau. Einige Features sind bereits implementiert, viele weitere werden folgen."
         ),
+      ]),
+      _vm._v(" "),
+      _c("h5", [_vm._v("Du bist Spieler?")]),
+      _vm._v(" "),
+      _c("ul", { staticClass: "list-group" }, [
+        _c("li", { staticClass: "list-group-item" }, [
+          _vm._v(
+            "Speichere deine Anmeldedaten, sodass du sie bei deiner nächsten Anmeldung mit nur einem Klick in das Anmeldeformular eintragen kannst"
+          ),
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "list-group-item" }, [
+          _vm._v(
+            "-in Kürze wirst du hier auch deine Charaktere speichern können. Deine Orga fragt nach den Daten deines Charakters? Kein Problem, auch diese sind nur einen Klick entfernt"
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("h5", [
+        _vm._v(
+          "Du bist Orga? Schicke mir eine Nachricht über das Kontaktformular und ich erstelle dir einen Orga-Account."
+        ),
+      ]),
+      _vm._v(" "),
+      _c("ul", { staticClass: "list-group" }, [
+        _c("li", { staticClass: "list-group-item" }, [
+          _vm._v(
+            "Verwalte die Anmeldungen deiner Con mit den Tools von larpcons.de"
+          ),
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "list-group-item" }, [
+          _vm._v(
+            "In Kürze wird es wieder möglich sein, To-Do-tasks für deine Con anzulegen, deinen Fundus zu organisiseren u.v.m."
+          ),
+        ]),
       ]),
     ])
   },

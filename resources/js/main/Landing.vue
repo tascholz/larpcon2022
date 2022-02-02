@@ -1,7 +1,19 @@
 <template>
     <div>
         <h1>Larpcons</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, saepe quos ex voluptatum vitae veniam porro pariatur, ab rerum accusantium maxime deleniti officiis quibusdam ratione atque itaque at illo. Quo quia dolor, recusandae cumque similique veniam doloribus voluptatem? Ipsum quibusdam veniam impedit, obcaecati explicabo accusantium hic iste aut dolor voluptatem incidunt nihil dolorum dolores ullam. Saepe sit harum voluptatibus placeat quis beatae earum atque, deleniti dolore exercitationem similique eos, dignissimos odit facilis tempore cupiditate voluptate eaque? Maxime omnis impedit at iusto rem iste! Itaque asperiores sapiente consequatur non, quisquam iste blanditiis, corrupti ipsam quo, laboriosam beatae! Ad doloribus inventore eaque?</p>
+        <p>Willkommen auf Larpcons.de</p>
+        <p>Diese Seite befindet sich noch im Aufbau. Einige Features sind bereits implementiert, viele weitere werden folgen.</p>
+        <h5>Du bist Spieler?</h5>
+        <ul class="list-group">
+            <li class="list-group-item">Speichere deine Anmeldedaten, sodass du sie bei deiner nächsten Anmeldung mit nur einem Klick in das Anmeldeformular eintragen kannst</li>
+            <li class="list-group-item">-in Kürze wirst du hier auch deine Charaktere speichern können. Deine Orga fragt nach den Daten deines Charakters? Kein Problem, auch diese sind nur einen Klick entfernt</li>
+        </ul>
+        <h5>Du bist Orga? Schicke mir eine Nachricht über das Kontaktformular und ich erstelle dir einen Orga-Account.</h5>
+        <ul class="list-group">
+            <li class="list-group-item">Verwalte die Anmeldungen deiner Con mit den Tools von larpcons.de</li>
+            <li class="list-group-item">In Kürze wird es wieder möglich sein, To-Do-tasks für deine Con anzulegen, deinen Fundus zu organisiseren u.v.m.</li>
+        </ul>
+        
     </div>
 </template>
 
