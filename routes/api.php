@@ -6,6 +6,7 @@ use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
 
 
 /*
@@ -45,3 +46,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/orgaEventList', [EventController::class, 'showOrgaEventList']);
     Route::get('/registrations/{id}', [RegistrationController::class, 'getRegistrations']);
     });
+
+    Route::get('/sendmail', [MailController::class, 'sendEmail']);
+    

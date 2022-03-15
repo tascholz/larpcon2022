@@ -6097,20 +6097,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           switch (_context.prev = _context.next) {
             case 0:
               _this.loading = true;
+              console.log("loading...");
               _this.eventId = _this.$route.params.id;
-              _context.next = 4;
+              _context.next = 5;
               return axios.get("/api/events/".concat(_this.$route.params.id)).then(function (response) {
                 _this.event = response.data;
-              });
-
-            case 4:
-              _context.next = 6;
-              return axios.get('/user').then(function (response) {
-                _this.user = response.data;
                 _this.loading = false;
               });
 
-            case 6:
+            case 5:
+              console.log("retrieved event data");
+              _context.next = 8;
+              return axios.get('/user').then(function (response) {
+                _this.user = response.data;
+              });
+
+            case 8:
             case "end":
               return _context.stop();
           }

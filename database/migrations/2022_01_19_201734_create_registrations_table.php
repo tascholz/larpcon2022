@@ -19,34 +19,34 @@ class CreateRegistrationsTable extends Migration
 
             $table->integer('event_id');
 
-            $table->string('reg_first_name');
-            $table->string('reg_last_name');
-            $table->string('reg_adress_street');
-            $table->string('reg_adress_pcode');
-            $table->string('reg_adress_city');
-            $table->date('reg_birthdate');
-            $table->string('reg_mail');
-            $table->string('reg_supervisor');
-            $table->boolean('reg_food');
+            $table->string('reg_first_name')->nullable();
+            $table->string('reg_last_name')->nullable();
+            $table->string('reg_adress_street')->nullable();
+            $table->string('reg_adress_pcode')->nullable();
+            $table->string('reg_adress_city')->nullable();
+            $table->date('reg_birthdate')->nullable();
+            $table->string('reg_mail')->nullable();
+            $table->string('reg_supervisor')->nullable();
+            $table->boolean('reg_food')->nullable();
             
-            $table->string('reg_char_name');
-            $table->string('reg_char_profession');
-            $table->string('reg_char_race');
-            $table->string('reg_char_group');
-            $table->text('reg_known_nsc');
-            $table->text('reg_char_history');
-            $table->string('reg_char_magic');
+            $table->string('reg_char_name')->nullable();
+            $table->string('reg_char_profession')->nullable();
+            $table->string('reg_char_race')->nullable();
+            $table->string('reg_char_group')->nullable();
+            $table->text('reg_known_nsc')->nullable();
+            $table->text('reg_char_history')->nullable();
+            $table->string('reg_char_magic')->nullable();
 
-            $table->text('reg_allergies');
-            $table->string('reg_tents');
-            $table->string('reg_pkw');
+            $table->text('reg_allergies')->nullable();
+            $table->string('reg_tents')->nullable();
+            $table->string('reg_pkw')->nullable();
 
-            $table->boolean('reg_newsletter');
-            $table->boolean('reg_first_time');
-            $table->text('reg_plot_wishes');
-            $table->text('reg_con_wishes');
-            $table->string('reg_corona');
-            $table->string('reg_agb');
+            $table->boolean('reg_newsletter')->nullable();
+            $table->boolean('reg_first_time')->nullable();
+            $table->text('reg_plot_wishes')->nullable();
+            $table->text('reg_con_wishes')->nullable();
+            $table->string('reg_corona')->nullable();
+            $table->string('reg_agb')->nullable();
 
         });
     }

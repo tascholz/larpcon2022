@@ -285,15 +285,17 @@ export default {
 
     async created() {
         this.loading = true;
+        console.log("loading...");
         this.eventId = this.$route.params.id;
         await axios.get(`/api/events/${this.$route.params.id}`).then(response => {
             this.event = response.data;
+            this.loading = false;
         });
+        console.log("retrieved event data");
 
         await axios.get('/user').then(response =>{
             this.user = response.data;
-            this.loading = false;
-        })
+        });
     }
 }
 </script>

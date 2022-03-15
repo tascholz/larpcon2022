@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\OrgaController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,3 +62,5 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         return auth()->user()->orga->events;
     });
     });
+
+   

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Registration;
 use Illuminate\Http\Request;
+use App\Http\Controllers\MailController;
 
 class RegistrationController extends Controller
 {
@@ -25,6 +26,10 @@ class RegistrationController extends Controller
      */
     public function store(Request $request)
     {   
+        $mc = new MailController();
+        $email_adress = $request->reg_mail;
+        $mc->sendEmail($email_adress);
+
         return Registration::create($request->all());
     }
 
