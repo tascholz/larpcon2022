@@ -5,7 +5,7 @@ import Orga from "./orga/Orga";
 import Calendar from "./events/Calendar";
 import Event from "./events/Event";
 import EventRegistration from "./events/EventRegistration"
-import OrgaEvent from "./Orga/OrgaEvent"
+import OrgaEvent from "./orga/OrgaEvent"
 
 import Login from "./auth/Login";
 
