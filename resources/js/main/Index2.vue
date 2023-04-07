@@ -1,9 +1,8 @@
 <template>
     
     <div>
-        
-        <nav class="navbar navbar-bg flex flex-col">
-            <router-link class="navbar-brand ml-3 nav-custom ml-2" :to="{name: 'home'}">Larpcons</router-link>
+        <nav class="navbar navbar-bg">
+            <router-link class="navbar-brand ml-3 nav-custom" :to="{name: 'home'}">Larpcons</router-link>
             <button class="navbar-toggler d-md-none" type="button">
                 <span id="menuburger" @click="MenuOpen" fill="none" stroke="currentColor">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-list" viewBox="0 0 16 16">
@@ -11,39 +10,9 @@
                     </svg>
                 </span>    
             </button>
-            <ul class="navbar-nav d-none d-md-flex flex-row">
-                    
-                    <li class="nav-item mx-2">
-                        <router-link class="nav-link nav-custom" :to="{name: 'calendar'}">Kalender</router-link>
-                    </li>
-    
-                    
-                   <li class="nav-item mx-2">
-                        <router-link class="nav-link nav-custom" :to="{name: 'user'}" v-if="user">Spieler-Bereich</router-link>
-                        <router-link class="nav-link disabled" :to="{name: 'user'}" v-else>Spieler-Bereich</router-link>
-                    </li>
-        
-                    <li class="nav-item mx-2">
-                        <router-link class="nav-link nav-custom" :to="{name: 'orga'}" v-if="orga_id">Orga-Bereich</router-link>
-                        <router-link class="nav-link disabled" :to="{name: 'orga'}" v-else>Orga-Bereich</router-link>
-                    </li>
-    
-                    <li class="nav-item mx-2">
-                        <a 
-                            v-on:click = "logout"
-                            class="nav-link nav-custom" 
-                            :to="{name: 'home'}"
-                            v-if="user"
-                            >
-                            Logout</a>
-                        <router-link class="nav-link nav-custom" :to="{name: 'login'}" v-else>Login</router-link>
-                    </li>
-                    </ul>
-            <!--mobile menu-->
             
-    
-        </nav>
-        <div class="hidden ml-2" id="menu">
+            <!--mobile menu-->
+            <div class="" id="menu">
                     <ul class="navbar-nav mr-auto">
                     
                     <li class="nav-item">
@@ -73,6 +42,8 @@
                     </li>
                     </ul>
                 </div> 
+    
+        </nav>
         <div class="background">
                 <div class="col-md-10 p-2 content">
                     <router-view></router-view>

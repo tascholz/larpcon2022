@@ -6091,6 +6091,40 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -33675,12 +33709,12 @@ var render = function () {
   return _c("div", [
     _c(
       "nav",
-      { staticClass: "navbbar navbbar-bg" },
+      { staticClass: "navbar navbar-bg flex flex-col" },
       [
         _c(
           "router-link",
           {
-            staticClass: "navbar-brand ml-3 nav-custom",
+            staticClass: "navbar-brand ml-3 nav-custom ml-2",
             attrs: { to: { name: "home" } },
           },
           [_vm._v("Larpcons")]
@@ -33688,10 +33722,13 @@ var render = function () {
         _vm._v(" "),
         _c(
           "button",
-          { staticClass: "navbar-toggler", attrs: { type: "button" } },
+          {
+            staticClass: "navbar-toggler d-md-none",
+            attrs: { type: "button" },
+          },
           [
             _c(
-              "a",
+              "span",
               {
                 attrs: {
                   id: "menuburger",
@@ -33700,109 +33737,225 @@ var render = function () {
                 },
                 on: { click: _vm.MenuOpen },
               },
-              [_vm._v(">")]
+              [
+                _c(
+                  "svg",
+                  {
+                    staticClass: "bi bi-list",
+                    attrs: {
+                      xmlns: "http://www.w3.org/2000/svg",
+                      width: "16",
+                      height: "16",
+                      fill: "white",
+                      viewBox: "0 0 16 16",
+                    },
+                  },
+                  [
+                    _c("path", {
+                      attrs: {
+                        "fill-rule": "evenodd",
+                        d: "M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z",
+                      },
+                    }),
+                  ]
+                ),
+              ]
             ),
           ]
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "hidden", attrs: { id: "menu" } }, [
-          _c("ul", { staticClass: "navbar-nav mr-auto" }, [
-            _c(
-              "li",
-              { staticClass: "nav-item" },
-              [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "nav-link nav-custom",
-                    attrs: { to: { name: "calendar" } },
-                  },
-                  [_vm._v("Kalender")]
-                ),
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              { staticClass: "nav-item" },
-              [
-                _vm.user
-                  ? _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link nav-custom",
-                        attrs: { to: { name: "user" } },
-                      },
-                      [_vm._v("Spieler-Bereich")]
-                    )
-                  : _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link disabled",
-                        attrs: { to: { name: "user" } },
-                      },
-                      [_vm._v("Spieler-Bereich")]
-                    ),
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              { staticClass: "nav-item" },
-              [
-                _vm.orga_id
-                  ? _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link nav-custom",
-                        attrs: { to: { name: "orga" } },
-                      },
-                      [_vm._v("Orga-Bereich")]
-                    )
-                  : _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link disabled",
-                        attrs: { to: { name: "orga" } },
-                      },
-                      [_vm._v("Orga-Bereich")]
-                    ),
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              { staticClass: "nav-item" },
-              [
-                _vm.user
-                  ? _c(
-                      "a",
-                      {
-                        staticClass: "nav-link nav-custom",
-                        attrs: { to: { name: "home" } },
-                        on: { click: _vm.logout },
-                      },
-                      [_vm._v("\n                        Logout")]
-                    )
-                  : _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link nav-custom",
-                        attrs: { to: { name: "login" } },
-                      },
-                      [_vm._v("Login")]
-                    ),
-              ],
-              1
-            ),
-          ]),
+        _c("ul", { staticClass: "navbar-nav d-none d-md-flex flex-row" }, [
+          _c(
+            "li",
+            { staticClass: "nav-item mx-2" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "nav-link nav-custom",
+                  attrs: { to: { name: "calendar" } },
+                },
+                [_vm._v("Kalender")]
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "nav-item mx-2" },
+            [
+              _vm.user
+                ? _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link nav-custom",
+                      attrs: { to: { name: "user" } },
+                    },
+                    [_vm._v("Spieler-Bereich")]
+                  )
+                : _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link disabled",
+                      attrs: { to: { name: "user" } },
+                    },
+                    [_vm._v("Spieler-Bereich")]
+                  ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "nav-item mx-2" },
+            [
+              _vm.orga_id
+                ? _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link nav-custom",
+                      attrs: { to: { name: "orga" } },
+                    },
+                    [_vm._v("Orga-Bereich")]
+                  )
+                : _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link disabled",
+                      attrs: { to: { name: "orga" } },
+                    },
+                    [_vm._v("Orga-Bereich")]
+                  ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "nav-item mx-2" },
+            [
+              _vm.user
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "nav-link nav-custom",
+                      attrs: { to: { name: "home" } },
+                      on: { click: _vm.logout },
+                    },
+                    [_vm._v("\n                        Logout")]
+                  )
+                : _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link nav-custom",
+                      attrs: { to: { name: "login" } },
+                    },
+                    [_vm._v("Login")]
+                  ),
+            ],
+            1
+          ),
         ]),
       ],
       1
     ),
+    _vm._v(" "),
+    _c("div", { staticClass: "hidden ml-2", attrs: { id: "menu" } }, [
+      _c("ul", { staticClass: "navbar-nav mr-auto" }, [
+        _c(
+          "li",
+          { staticClass: "nav-item" },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "nav-link nav-custom",
+                attrs: { to: { name: "calendar" } },
+              },
+              [_vm._v("Kalender")]
+            ),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          { staticClass: "nav-item" },
+          [
+            _vm.user
+              ? _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link nav-custom",
+                    attrs: { to: { name: "user" } },
+                  },
+                  [_vm._v("Spieler-Bereich")]
+                )
+              : _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link disabled",
+                    attrs: { to: { name: "user" } },
+                  },
+                  [_vm._v("Spieler-Bereich")]
+                ),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          { staticClass: "nav-item" },
+          [
+            _vm.orga_id
+              ? _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link nav-custom",
+                    attrs: { to: { name: "orga" } },
+                  },
+                  [_vm._v("Orga-Bereich")]
+                )
+              : _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link disabled",
+                    attrs: { to: { name: "orga" } },
+                  },
+                  [_vm._v("Orga-Bereich")]
+                ),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          { staticClass: "nav-item" },
+          [
+            _vm.user
+              ? _c(
+                  "a",
+                  {
+                    staticClass: "nav-link nav-custom",
+                    attrs: { to: { name: "home" } },
+                    on: { click: _vm.logout },
+                  },
+                  [_vm._v("\n                        Logout")]
+                )
+              : _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link nav-custom",
+                    attrs: { to: { name: "login" } },
+                  },
+                  [_vm._v("Login")]
+                ),
+          ],
+          1
+        ),
+      ]),
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "background" }, [
       _c(
