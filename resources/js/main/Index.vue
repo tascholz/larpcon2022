@@ -46,22 +46,22 @@
         <div class="hidden ml-2" id="menu">
                     <ul class="navbar-nav mr-auto">
                     
-                    <li class="nav-item">
+                    <li class="nav-item" @click="MenuOpen">
                         <router-link class="nav-link nav-custom" :to="{name: 'calendar'}">Kalender</router-link>
                     </li>
     
                     
-                   <li class="nav-item">
+                   <li class="nav-item" @click="MenuOpen">
                         <router-link class="nav-link nav-custom" :to="{name: 'user'}" v-if="user">Spieler-Bereich</router-link>
                         <router-link class="nav-link disabled" :to="{name: 'user'}" v-else>Spieler-Bereich</router-link>
                     </li>
         
-                    <li class="nav-item">
+                    <li class="nav-item" @click="MenuOpen">
                         <router-link class="nav-link nav-custom" :to="{name: 'orga'}" v-if="orga_id">Orga-Bereich</router-link>
                         <router-link class="nav-link disabled" :to="{name: 'orga'}" v-else>Orga-Bereich</router-link>
                     </li>
     
-                    <li class="nav-item">
+                    <li class="nav-item" @click="MenuOpen">
                         <a 
                             v-on:click = "logout"
                             class="nav-link nav-custom" 
