@@ -1,5 +1,5 @@
 <template>
-    <div v-if="!loading">
+    <div v-if="!submitted">
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Anmeldung</h4>
@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="form-group" v-if="event.reg_food_price != 0">
-                        <label for="first_time">Möchtest du die Vollverpflegung buchen?</label>
+                        <label for="first_time">Möchtest du ein Nsc sein?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="food" id="no" value="nein" checked v-model="reg_food">
                             <label class="form-check-label" for="no">
@@ -59,6 +59,7 @@
                             </label>
                         </div>
                     </div>
+		    <p>Wenn du NSC zein möchtest, überspringe den IT-Teil</p>
 
                     <hr />
                     <h5 class="card-subtitle text-muted">It</h5>
@@ -127,7 +128,7 @@
                     </div>
 
                     <div class="form-group" v-if="event.reg_newsletter == 1">
-                        <label for="newsletter">Möchtest du unseren Newsletter abbonieren?</label>
+                        <label for="newsletter">Möchtest du unseren Newsletter abonieren?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="newsletter" id="no" value="nein" checked v-model="reg_newsletter">
                             <label class="form-check-label" for="no">
@@ -185,7 +186,7 @@
             </div>
         </div>
     </div>
-    <div v-else>loading...</div>
+    <div v-else>Danke für deine Anmeldung, eine Bestätigungsemail ist zu dir unterwegs</div>
 
 </template>
 
@@ -195,6 +196,7 @@ export default {
         return {
             user: null,
             loading: false,
+	    submitted: false,
             event: null,
             reg_first_name: null,
             reg_last_name: null,
@@ -242,6 +244,8 @@ export default {
             } else {
                 this.reg_first_time = 1
             }
+
+	    this.submitted = true;
 
             axios.post('/api/registrations', {
                 'event_id': String(this.event.id),

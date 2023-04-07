@@ -9,8 +9,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p class="card-text">{{event.description}}</p>
-                        <p class="card-text">SC Preis: {{event.price_sc}}</p>
-                        <p class="card-text">NSC Preis: {{event.price_nsc}}</p>
+                        <p class="card-text">SC Preis: {{event.sc_price}} €</p>
+                        <p class="card-text">NSC Preis: {{event.nsc_price}} €</p>
                     </div>
                     <div class="col-md-6">
                         <img :src="image_path" 

@@ -30,6 +30,6 @@ class TestMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Test Mail From Larpcons')->view('emails.Testmail');
+        return $this->subject('Anmeldebestätigung von Larpcons.de')->view('emails.Testmail');
     }
 }
